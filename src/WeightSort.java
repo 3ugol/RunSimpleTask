@@ -6,29 +6,28 @@ public class WeightSort {
 
     public static String orderWeight(String strng) {
         final String regex = "(\\d+)";
-        //strng = "56 65 74 5t y6 -6 100 99 68 86 180 90";
-
         final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
         final Matcher matcher = pattern.matcher(strng);
 
-        List<String> list = new ArrayList<String>();
+        List<Integer> list = new ArrayList<Integer>();
         while (matcher.find()) {
-            System.out.println("Full match: " + matcher.group(0));
-            list.add(matcher.group(0));
-                    }
-        System.out.println(list.size());
-        for (int c=0; c<list.size(); c++ ){
-            if (list.get(c).length()>1){
-                int s=0;
-                for (int c1=0; c1<list.get(c).length(); c1++){
-                    s += (list.get(c).charAt(c1)-48);
-                    //s = Integer.parseInt(list.get(c) );
-
-
+            list.add(Integer.parseInt(matcher.group(0)));
+            }
+        for (int count=0 ; count<list.size(); count++ ) {
+            int min = (list.get(count)%10) + (list.get(count)%100) + (list.get(count)%1000) ; // 11
+            int min_i = count;
+            for (int c2 = count + 1; c2 < list.size(); c2++) {
+                if ((list.get(c2)%10+list.get(c2)%100+list.get(c2)%1000) < min) { //11  (list.get(c2)%10+list.get(c2)/10)
+                    min = list.get(c2)%10+list.get(c2)%100+list.get(c2)%1000;
+                    min_i = c2;
                 }
-                System.out.println(s);
+            }
+            if ( count != min_i){
+                int tmp = list.get(count);
+                list.set(count, list.get(min_i));
+                list.set(min_i, tmp);
             }
         }
-        return list.get(1);
+        return String.format("" + list);
     }
 }
