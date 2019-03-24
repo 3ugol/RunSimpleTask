@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.lang.String;
 import java.lang.Integer;
@@ -31,9 +30,12 @@ public class WeightSort {
                 list.set(min_i, tmp);
             }
         }
-
-                return ("" + list);
-
+        StringBuilder sb = new StringBuilder();
+        for (int i : list) {
+            sb.append(i).append(' ');
+        }
+        sb.delete(sb.length()-1,sb.length());
+                 return sb.toString();
     }
 
     public static int weight(int dig) {
