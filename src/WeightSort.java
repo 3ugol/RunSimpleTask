@@ -1,5 +1,8 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.lang.String;
+import java.lang.Integer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 public class WeightSort {
@@ -14,11 +17,11 @@ public class WeightSort {
             list.add(Integer.parseInt(matcher.group(0)));
             }
         for (int count=0 ; count<list.size(); count++ ) {
-            int min = (list.get(count)%10) + (list.get(count)%100) + (list.get(count)%1000) ; // 11
+            int min = weight(list.get(count));
             int min_i = count;
             for (int c2 = count + 1; c2 < list.size(); c2++) {
-                if ((list.get(c2)%10+list.get(c2)%100+list.get(c2)%1000) < min) { //11  (list.get(c2)%10+list.get(c2)/10)
-                    min = list.get(c2)%10+list.get(c2)%100+list.get(c2)%1000;
+                if (weight(list.get(c2)) < min) {
+                    min = weight(list.get(c2));
                     min_i = c2;
                 }
             }
@@ -28,6 +31,18 @@ public class WeightSort {
                 list.set(min_i, tmp);
             }
         }
-        return String.format("" + list);
+
+                return ("" + list);
+
+    }
+
+    public static int weight(int dig) {
+        int num = dig;
+        int sum = 0;
+        while (num > 0) {
+            sum = sum + num % 10;
+            num = num / 10;
+        }
+        return sum;
     }
 }
