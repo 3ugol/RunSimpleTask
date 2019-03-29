@@ -4,6 +4,7 @@ import java.lang.String;
 import java.lang.Integer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.io.*;
 public class WeightSort {
 
     public static String orderWeight(String strng) {
@@ -34,8 +35,9 @@ public class WeightSort {
         for (int i : list) {
             sb.append(i).append(' ');
         }
-        sb.delete(sb.length()-1,sb.length());
-                 return sb.toString();
+        //sb.trimToSize(); //sb.delete(sb.length()-1,sb.length());
+        String out = sb.toString();
+                 return out.trim();
     }
 
     public static int weight(int dig) {
