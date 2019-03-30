@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.List;
+import java.util.List;      // сумма трех максимальных чисел
 
 public class Solution {
     public static int maxTriSum(int[] numbers) {

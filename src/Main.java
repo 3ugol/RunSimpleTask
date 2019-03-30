@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
 //        int [] arr = {-3,-27,-4,-2,-27,-2};
 
-
+        System.out.println(MexicanWave.wave("cool"));
 //        System.out.println(Solution.maxTriSum( arr ));
 //        int [] arr = {-21, -12, -16, -14, 11, -16, 29, -2, -2, 1, -30, 26, -2, 28, -10, 12, -16, 17, 3, 27, 22, -12, 22, -7, 13, 14, 7, 3, 25, 16, 9, -30, 25};
 //        System.out.println(Max.sequence( arr ));
