@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
 //        int [] arr = {-3,-27,-4,-2,-27,-2};
 //        char[] chr = { 'O','Q','R','S'};
-        System.out.println(BraceChecker.isValid("[({})](]"));
+        System.out.println(BraceChecker.isValid("(})"));
 //        System.out.println(FindMissingLetter.findMissingLetter(chr));
 //        System.out.println(MexicanWave.wave("cool"));
 //        System.out.println(Solution.maxTriSum( arr ));
