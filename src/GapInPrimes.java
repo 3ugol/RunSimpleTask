@@ -12,22 +12,20 @@ class GapInPrimes {
         for (long i = m; i < n; i++) {
             for (int j = 2; j < i; j++) {
                 if (i % j == 0) {
-//                System.out.println(j);
                     b = false;
                     break;
                 }
-//            else System.out.println(j);
             }
-            if (b) list.add(i);
+            if (b) {list.add(i);
+                System.out.println(list);
+            }
             else b = true;
-
-
             int x = 0, y = 1;
             for (int q = 1; list.size() > 2 && q < list.size(); q++) {
                 if (g == list.get(y) - list.get(x)) {
                     list2[0] = (list.get(x));
                     list2[1] = (list.get(y));
-                    break;
+                    return list2;
                 }
                 x++;
                 y++;
