@@ -6,7 +6,9 @@ public class Main {
 //        int [] arr = {-3,-27,-4,-2,-27,-2};
 //        char[] chr = { 'O','Q','R','S'};
 
-        System.out.println(GapInPrimes.gap(2,10000000,10001000));
+        System.out.println(PokerHand.compareWith("2H 3H 4H 5H 6H", "KS AS TS QS JS"));
+
+//        System.out.println(GapInPrimes.gap(2,10000000,10001000));
 //        System.out.println(BraceChecker.isValid("(})"));
 //        System.out.println(FindMissingLetter.findMissingLetter(chr));
 //        System.out.println(MexicanWave.wave("cool"));
