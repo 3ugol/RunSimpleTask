@@ -5,17 +5,18 @@ public class PokerHand
     public enum Result { TIE, WIN, LOSS } //
 
     PokerHand(String hand) {
-        this.
+
 //        this.comp = comp;
     }
 
     public Result compareWith(PokerHand hand) {
-        PokerHand gamer = new PokerHand("KS 2H 5C JD TD");
-
-
 //        if (gamer > compSum) return Result.WIN;
 //        else if (gamerSum < compSum) return Result.LOSS;
         return Result.TIE;
+    }
+    public static String sort (String gamer, String comp){
+        char card [] = {' ','2','3','4','5','6','7','8','9','T','J','Q','K','A' };
+        return "";
     }
 }
 
